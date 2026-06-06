@@ -3,6 +3,7 @@ import { OverallScoreGauge, CategoryScores } from '@/components/ScoreGauges';
 import MetricCardsGrid from '@/components/MetricCards';
 import CopilotTrendChart from '@/components/CopilotTrendChart';
 import ActivityConsistency from '@/components/ActivityConsistency';
+import Link from 'next/link';
 
 async function getScorecardData(username) {
   const { db } = await import('@/lib/db');
@@ -98,17 +99,22 @@ export default async function Dashboard(props) {
     <div className="dashboard-container">
       
       {/* Header Banner */}
-      <div className="header-banner">
+      <div className="header-banner" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div className="header-title">
           <h1>GITHUB + COPILOT INDIVIDUAL SCORECARD</h1>
           <p>Developer Productivity & AI Adoption</p>
         </div>
-        <div className="header-date">
-          <div>
-            <p style={{ color: '#cbd5e1', fontWeight: 400 }}>Reporting Period</p>
-            <p>{reportingPeriod}</p>
+        <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+          <div className="header-date">
+            <div>
+              <p style={{ color: '#cbd5e1', fontWeight: 400 }}>Reporting Period</p>
+              <p>{reportingPeriod}</p>
+            </div>
+            <div className="calendar-icon">📅</div>
           </div>
-          <div className="calendar-icon">📅</div>
+          <Link href="/admin" style={{ backgroundColor: 'rgba(255,255,255,0.1)', color: 'white', padding: '0.5rem 1rem', borderRadius: '0.5rem', textDecoration: 'none', fontWeight: 600, fontSize: '0.9rem', border: '1px solid rgba(255,255,255,0.2)' }}>
+            ⚙️ Admin View
+          </Link>
         </div>
       </div>
 
