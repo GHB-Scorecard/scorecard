@@ -1,0 +1,126 @@
+.container {
+  display: flex;
+  gap: 1.5rem;
+  height: 100%;
+}
+
+.insightsPanel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sectionTitle {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary-green);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.sectionTitleOrange {
+  color: var(--primary-orange);
+}
+
+.insightItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+.insightIconGreen {
+  color: var(--primary-green);
+  font-size: 1rem;
+}
+
+.insightIconOrange {
+  color: var(--primary-orange);
+  font-size: 1rem;
+}
+
+.activityPanel {
+  flex: 1;
+  border-left: 1px solid var(--border-color);
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.activityHeader {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+.heatmapContainer {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.dayLabels {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 0.65rem;
+  color: var(--text-tertiary);
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.heatmapGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.heatmapCol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  justify-content: space-between;
+}
+
+.heatmapCell {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 2px;
+}
+
+.cellHigh { background-color: var(--primary-green); }
+.cellMedium { background-color: #6ee7b7; } /* lighter green */
+.cellLow { background-color: #d1fae5; } /* even lighter */
+.cellNone { background-color: #f1f5f9; }
+
+.legend {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  margin-top: 1rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.legendBox {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}

@@ -1,0 +1,145 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.gaugeWrapper {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  margin-bottom: 1rem;
+}
+
+.gaugeSvg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.gaugeBg {
+  fill: none;
+  stroke: var(--border-color);
+  stroke-width: 12;
+}
+
+.gaugeProgress {
+  fill: none;
+  stroke: var(--primary-blue);
+  stroke-width: 12;
+  stroke-linecap: round;
+  transition: stroke-dasharray 1s ease-out;
+}
+
+.gaugeText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.scoreValue {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  line-height: 1;
+}
+
+.scoreMax {
+  font-size: 1rem;
+  color: var(--text-tertiary);
+  font-weight: 500;
+}
+
+.levelLabel {
+  color: var(--primary-blue);
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.subLabel {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+}
+
+/* Category Bars */
+.categoryList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.categoryItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.categoryIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.iconBlue { background-color: #e0f2fe; color: var(--primary-blue); }
+.iconGreen { background-color: #d1fae5; color: var(--primary-green); }
+.iconPurple { background-color: #ede9fe; color: var(--primary-purple); }
+
+.categoryDetails {
+  flex: 1;
+}
+
+.categoryHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+
+.categoryName {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.categoryScore {
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.categoryScore span {
+  color: var(--text-tertiary);
+  font-weight: 400;
+}
+
+.progressBarBg {
+  height: 8px;
+  background-color: var(--border-color);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progressBarFill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 1s ease-out;
+}
+
+.fillBlue { background-color: var(--primary-blue); }
+.fillGreen { background-color: var(--primary-green); }
+.fillPurple { background-color: var(--primary-purple); }
+
+.disclaimer {
+  font-size: 0.7rem;
+  color: var(--text-tertiary);
+  margin-top: 2rem;
+}
